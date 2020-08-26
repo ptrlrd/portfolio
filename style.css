@@ -165,8 +165,12 @@ a:hover {
         height: 700px;
     }
 
+    main {
+        margin: 0 12%;
+    }
+
     body {
-      font-size:.75em;
+      font-size:.85em;
     }
 
     .backgroundcircle {
