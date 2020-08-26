@@ -162,7 +162,7 @@ a:hover {
     }
 
     header {
-        height: 820px;
+        height: 700px;
     }
 
     body {
@@ -174,7 +174,8 @@ a:hover {
         width: 50px;
         display: inline-block;
         border-radius: 50%;
-        background-color: rgba(103, 0, 200, 0.75);
+        background-color: rgba(103, 0, 200, 0.15);
+        margin-top: 100px;
     }   
 
     .arrow {
@@ -188,7 +189,7 @@ a:hover {
     .down {
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
-        margin-top: 15px;
+        margin-top: 17.5px;
       }
     
 }
