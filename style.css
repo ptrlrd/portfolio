@@ -138,8 +138,9 @@ This code breaks the single column into two
     border:transparent;
     border-radius: 5px;
     display: flex;
-    margin-left: 165px;
-    padding: 5px;   
+    padding: 5px;
+    flex-direction: row;
+    margin: auto; 
 }
 
 
