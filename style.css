@@ -14,7 +14,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family:Source Code Pro, sans-serif;
+    font-family: monospace, sans-serif;
 }
 
 header {
@@ -53,7 +53,7 @@ footer {
 .menu {
     list-style-type: none;
     margin: 0;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 25px;
     display: flex;
@@ -71,14 +71,7 @@ footer {
 }
 
 
-.menu a:hover{
-    background-color: rgba(255,255,255,.25);
-}
-
 /* Body Content */
-
-
-
 
 
 /* Will activate this CSS coding as more projects get made. 
@@ -127,7 +120,7 @@ This code breaks the single column into two
 }
 
 .introduction-paragraph {
-    font-family: Source Code Pro, sans-serif;
+    font-family: monospace, sans-serif;
     font-size: .9em;
     font-weight: bolder;
     padding-left: 50px;
@@ -139,7 +132,7 @@ This code breaks the single column into two
 /*--- Psuedo Classes/hyperlinking ---*/
 a {
     text-decoration: none;
-    color: rgb(31, 94, 31);
+    color: purple;
     font-weight: bold;
 }
 
