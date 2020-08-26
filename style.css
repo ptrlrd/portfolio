@@ -124,8 +124,6 @@ This code breaks the single column into two
     display: block;
     text-align:center;
     padding: 250px 0;
-    /* -webkit-text-stroke-width: .2px; 
-    -webkit-text-stroke-color: black;  */
 }
 
 .introduction-paragraph {
@@ -133,8 +131,15 @@ This code breaks the single column into two
     font-size: .9em;
     font-weight: bolder;
     padding-left: 50px;
-    /* -webkit-text-stroke-width: .3px; 
-    -webkit-text-stroke-color: darkgreen;  */
+}
+
+.resume_button {
+    background-color:rgba(103, 0, 200, 0.25);
+    border: .5px solid rgba(103, 0, 200, 0.45);
+    box-shadow: 4px 5px 10px rgba(0,0,0, 0.25);
+    display: flex;
+    margin: 1px;
+    padding: 5px;   
 }
 
 
@@ -144,10 +149,6 @@ a {
     color: purple;
     font-weight: bold;
 }
-
-/* a:link {
-    color: var(--deep-purple);
-} */
 
 a:hover {
     color: var(--bubble-gum-pink);
