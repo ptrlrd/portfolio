@@ -161,6 +161,10 @@ a:hover {
         display: none;
     }
 
+    header {
+        height: 700px;
+    }
+
     body {
       font-size:.75em;
     }
