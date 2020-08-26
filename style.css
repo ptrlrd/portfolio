@@ -73,6 +73,15 @@ footer {
 
 /* Body Content */
 
+.arrow {
+    display:none;
+  }
+  
+
+.down {
+    display: none;
+  }
+
 
 /* Will activate this CSS coding as more projects get made. 
 This code breaks the single column into two 
@@ -143,4 +152,31 @@ a {
 a:hover {
     color: var(--bubble-gum-pink);
     text-decoration: none;
+}
+
+/* Mobile Readiness */
+
+@media (max-width: 500px) {
+    .menu {
+        display: none;
+    }
+
+    body {
+      font-size:.75em;
+    }
+
+    .arrow {
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 5px;
+      }
+      
+    
+    .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        margin-top: 35px;
+      }
+    
 }
