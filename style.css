@@ -9,20 +9,16 @@
 
 }
 
-/*--- Universal Selector ---*/
-/* * {
-    box-sizing: border-box;
-  } */
-
 /*--- Base Styling ---*/
 
 body {
     margin: 0;
     padding: 0;
+    font-family:montserrat, sans-serif;
 }
 
 header {
-    background-image: linear-gradient(#2E2238, transparent, #72516E), url(../images/hero-image.jpg);
+    background-image: linear-gradient(#2E2238, transparent, #72516E), url(images/hero-image.jpg);
     background-size: cover;
     height: 600px;
     width:100%;
@@ -57,38 +53,36 @@ footer {
 .menu {
     list-style-type: none;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
     position: fixed;
     top: 0;
     right: 25px;
+    display: flex;
 }
 
-
-.top-menu {
-    display: block;
-    color: white;
-    padding: 16px;
-    text-decoration: none;
-}
 
 .menu li {
-    float: left;
     padding: 5px 5px;
     text-align: center;
+    background-color: transparent;
 }
 
-.contact {
-    border: 1px dotted white;
-    margin: 0;
-    background-color: white;
-    color: #000;
+.menu a{
+    color: white;
 }
 
-.contact-button {
-    background-color: white;
-    border: 1px solid #000;
+
+.menu a:hover{
+    background-color: rgba(255,255,255,.25);
 }
+
+/* Body Content */
+
+
+
+
+
+/* Will activate this CSS coding as more projects get made. 
+This code breaks the single column into two 
 
 #projects {
     width: 100%;
@@ -115,22 +109,38 @@ footer {
     width: 155px;
     margin: auto;
     padding: 0;
-}
+} */
 
 /*--- Header Design ---*/
 .introduction {
+    font-family: prompt, serif;
+    font-weight: 500;
+    letter-spacing: .5px;
+    word-spacing: .5px;
+    font-size: 1.2em;
+    line-height: 1;
     display: block;
     text-align:center;
-    padding: 185px 0;
-    -webkit-text-stroke-width: .2px; 
-    -webkit-text-stroke-color: black; 
+    padding: 250px 0;
+    /* -webkit-text-stroke-width: .2px; 
+    -webkit-text-stroke-color: black;  */
 }
 
+.introduction-paragraph {
+    font-family: montserrat, sans-serif;
+    font-size: .9em;
+    font-weight: bolder;
+    padding-left: 50px;
+    /* -webkit-text-stroke-width: .3px; 
+    -webkit-text-stroke-color: darkgreen;  */
+}
 
 
 /*--- Psuedo Classes/hyperlinking ---*/
 a {
     text-decoration: none;
+    color: rgb(31, 94, 31);
+    font-weight: bold;
 }
 
 a:link {

@@ -2,89 +2,104 @@
 <html>
 	<head>
 		<title>Peter Lord's Portfolio</title>
-		<!-- <link href="style.css" rel="stylesheet"> -->
+		<link href="style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
 		<!-- Meta Data Content -->
 		<meta charset="UTF-8">
-		<meta name="description" content="Peter Lord is an aspiring Front End Developer.">
+		<meta name="description" content="Peter Lord is a Front End Developer.">
 		<meta name="keywords" content="Peter Lord, Front End Developer,">
 		<meta name="author" content="Peter Lord">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
-	<!-- Hello! If you're viewing this to validate my coding ability, this website is currently under construction
-	and will be updated over time. For additional information, please see my github @ https://github.com/ptrlrd or 
-	reach out to me through email im@ptrlrd.com -->
-
 	<body>
 		<header>
-			<h1><strong>👋 I am Peter Lord!</strong></h1>
-			<p>I am from San Francisco, California</p>
 			
-			<h3>Connect with me:</h3>
-			<nav id ="social">
-				<ul>
-					<li><a href="https://twitter.com/ptrlrd">Twitter</a></li>
-					<li><a href="https://www.linkedin.com/in/ptrlrd/">Linkedin</a></li>
-					<li><a href="https://github.com/ptrlrd"><span class="label">GitHub</a></li>
-					<li><a href="https://medium.com/@ptrlrd"><span class="label">Blog</a></li>	
+			<!-- <img src="images/avatar.png" alt="Cartoon image of Peter Lord" width="250" height="250"> -->
+			<div class ="introduction">
+				<h1><strong>👋 I am Peter Lord</strong></h1>
+				<p class ="introduction-paragraph">I am a Front End Developer.</p>
+			</div>
+
+			<nav class="top-menu">
+				<ul class="menu">
+					<li><a href="#">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#resume">Resume</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#social">Social</a></li>
+					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
+
 		</header>
 
 		<main>
+			<section id="about">
+				<h3>About Peter</h3>
+					<strong>Hello!</strong>
+					<p>Blah blah blah, I am Peter</p>
+			</section>
+
+			
 			<section id="resume">
 				<h3>Work</h3>
-				<strong>Currently:</strong><br>
-				<p>Looking for new opportunities while learning to become a Front End Developer</p>
-			</section>
-			
-			<section>	
-			<strong>Previously:</strong>
-				<ul>
-					<li>Technical Video Producer at <a href="https://getcruise.com" target="_blank">Cruise </a></li>
-					<li>Internal Communications Manager at <a href="https://getcruise.com" target="_blank">Cruise </a>	</li>
-					<li>Social Media Manager at <a href="https://getcruise.com" target="_blank">Cruise </a>	</li>
-					<li>Product Operations Associate at <a href="https://getcruise.com" target="_blank">Cruise </a>	</li>
-					<li>Autonomous Vehicle Training Supervisor at <a href="https://getcruise.com" target="_blank">Cruise </a>	</li>
-					<li>AV Trainer Team Lead at <a href="https://aerotek.com" target="_blank">Aerotek</a> with <a href="https://getcruise.com" target="_blank">Cruise</a></li>
-					<li>Parts Specialist at <a href="http://www.bendpak.com/" target="_blank">BendPak</a></li>
-					<li>Solution Specialist at <a href="http://www.verizonwireless.com/" target="_blank">Verizon Wireless</a></li>
-					<li>Human Resources Specialist at <a href="http://www.us.army.mil/" target="_blank">U.S. Army</a></li>
-					<li>Technician at <a href="http://www.flextronics.com" target="_blank">Flextronics</a></li>
-				</ul>
-				<a href="http://ptrlrd.com/resume.pdf" target="_blank">Download my resume</a><br>
+				
+				<div class="resume_current">
+					<strong>Currently:</strong>
+					<p>Looking for new opportunities while learning to become a Front End Developer</p>
+				</div>
+
+				<div class="resume_previous">
+					<strong>Previously:</strong>
+						<ul>
+							<li>Technical Video Producer at <a href="https://getcruise.com" target="_blank">Cruise </a>
+							<li>AV Trainer Team Lead at <a href="https://aerotek.com" target="_blank">Aerotek</a> with <a href="https://getcruise.com" target="_blank">Cruise</a>
+							<li>Parts Specialist at <a href="http://www.bendpak.com/" target="_blank">BendPak</a>
+							<li>Solution Specialist at <a href="http://www.verizonwireless.com/" target="_blank">Verizon Wireless</a>
+							<li>Information Technology Specialist at <a href="http://www.us.army.mil/" target="_blank">U.S. Army</a>
+							<li>Technician at <a href="http://www.flextronics.com" target="_blank">Flextronics</a>
+						</ul>
+					<button type="button"><a href="http://ptrlrd.com/resume.pdf" target="_blank">Download my resume</a><br></button>
+				</div>
 			</section>
 			<br>	
 
 			<section id="projects">
-				<div>
+				<div class="projects_current">
 					<strong>Current Projects:</strong>
 					<ul>
-						<li><a href="https://bd1.ai" target="_blank">BD-1</a> - Co-founder - A purposeful chat bot coded in NodeJS, PHP.</li>
+						<li><a href="https://bd1.ai" target="_blank">BD-1</a> - Co-founder - A purposeful chat bot coded in NodeJS, PHP, CSS, and HTML. This program is now supporting >1000 users</li>
 					</ul>
 				</div>
 
-				<div>
-					<h3>Past Projects:</h3>
+				<div class="projects_previous">
+					<strong>Past Projects:</strong>
 					<ul>
-						<li>EloTalk - Co-founder - Brand built from the ground up that focused on esports journalism</li>
+						<li>EloTalk - Co-founder - Esports and gaming media website, supported over >100K users a month</li>
 					</ul>
 				</div>
 			</section>
 
-			<section id="blog">
-				<h3>Latest blog entry:</h3>
-				<p><a href="https://medium.com/@ptrlrd/who-the-fuck-is-peter-c1bee7f23866">Who the fuck is Peter Lord?</a></p>
-			</section>
+			<div class="social">
+			<h3> Connect with me </h3>	
+				<ul>
+					<li><a href="https://twitter.com/ptrlrd">Twitter</a></li>
+					<li><a href="https://www.linkedin.com/in/ptrlrd/">Linkedin</a></li>
+					<li><a href="https://github.com/ptrlrd"><span class="label">GitHub</a></li>
+					<li><a href="https://medium.com/@ptrlrd"><span class="label">My Blog</a></li>	
+				</ul>
+			</div>
 
 			<section id="contact">
-				<h3>Contact me:</h3>
+				<h3>Contact me</h3>
 				<p><strong>Email:&nbsp;</strong><a href="mailto:im@ptrlrd.com" subject="Hello%20there%20Peter&body=I%20would%20love%20to%20learn%20more%20about%20you!">im@ptrlrd.com</a></p>
 			</section>
 		</main>
 
 		<footer>
-			<p>Made with &hearts; by Peter</p>
+			Made with &hearts; by Peter
 		</footer>
 	</body>
 </html>
