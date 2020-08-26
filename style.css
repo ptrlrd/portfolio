@@ -165,6 +165,14 @@ a:hover {
       font-size:.75em;
     }
 
+    .backgroundcircle {
+        height: 50px;
+        width: 50px;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: rgba(103, 0, 200, 0.15);
+    }   
+
     .arrow {
         border: solid white;
         border-width: 0 3px 3px 0;
@@ -176,7 +184,7 @@ a:hover {
     .down {
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
-        margin-top: 35px;
+        margin-top: 15px;
       }
     
 }
