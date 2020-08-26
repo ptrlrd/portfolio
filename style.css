@@ -143,9 +143,9 @@ a {
     font-weight: bold;
 }
 
-a:link {
+/* a:link {
     color: var(--deep-purple);
-}
+} */
 
 a:hover {
     color: var(--bubble-gum-pink);
