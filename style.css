@@ -109,6 +109,9 @@ img.grayscale:hover {
     display: none;
   }
 
+  .projects-current {
+      padding-top: 25px;
+  }
 
 /* Will activate this CSS coding as more projects get made. 
 This code breaks the single column into two 
