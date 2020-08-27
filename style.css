@@ -73,6 +73,11 @@ footer {
 
 /* Body Content */
 
+.lang-tools {
+    height: 35px;
+    width: 35px;
+}
+
 .arrow {
     display:none;
   }
@@ -197,5 +202,11 @@ a:hover {
         -webkit-transform: rotate(45deg);
         margin-top: 17.5px;
       }
+
+      .lang-tools {
+        height: 20px;
+        width: 20px;
+    }
+    
     
 }
