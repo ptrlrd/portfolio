@@ -146,7 +146,7 @@ This code breaks the single column into two
 
 /*--- Header Design ---*/
 .introduction {
-    font-family: prompt, serif;
+    font-family: Helvetica, sans-serif;
     font-weight: 500;
     letter-spacing: .5px;
     word-spacing: .5px;
