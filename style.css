@@ -237,3 +237,13 @@ a:hover {
     
     
 }
+
+@media (min-width: 3400px ) {
+    header {
+        height: 1440px;
+    }
+
+    .introduction {
+        padding: 685px 0;
+    }
+}
