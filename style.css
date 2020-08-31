@@ -20,12 +20,13 @@ body {
 header {
     background-image: linear-gradient(#2E2238, transparent, #72516E), url(/images/hero-image.jpg);
     background-size: cover;
-    height: 600px;
+    height: 1080px;
     width:100%;
     margin: 0;
     padding: 0;
     background-color: var(--deep-purple);
     color: white;
+    padding: auto;
 }
 
 main {
@@ -154,7 +155,7 @@ This code breaks the single column into two
     line-height: 1;
     display: block;
     text-align:center;
-    padding: 250px 0;
+    padding: 495px 0;
 }
 
 .introduction-paragraph {
