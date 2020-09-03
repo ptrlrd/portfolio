@@ -44,8 +44,8 @@ h3 {
 }
 
 footer {
-    padding-top: 2px;
-    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 15px;
     margin-top: 2px;
     background-color:var(--deep-purple);
     text-align: center;
