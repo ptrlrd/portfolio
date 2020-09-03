@@ -156,6 +156,8 @@ This code breaks the single column into two
     display: block;
     text-align:center;
     padding: 495px 0;
+    background-color:rgba(0, 0, 0, 0.35);
+
 }
 
 .introduction-paragraph {
