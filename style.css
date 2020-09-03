@@ -196,9 +196,7 @@ a:hover {
 /* Mobile Readiness */
 
 @media (max-width: 500px) {
-    .menu {
-        display: none;
-    }
+
 
     header {
         height: 700px;
@@ -212,9 +210,13 @@ a:hover {
       font-size:.85em;
     }
 
+    .menu {
+        display: none;
+    }
 
     .introduction {
         padding-top: 275px;
+        padding-bottom: 174px;
     }
 
     .backgroundcircle {
