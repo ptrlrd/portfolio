@@ -212,6 +212,11 @@ a:hover {
       font-size:.85em;
     }
 
+
+    .introduction {
+        padding-top: 275px;
+    }
+
     .backgroundcircle {
         height: 50px;
         width: 50px;
