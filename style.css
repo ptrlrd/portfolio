@@ -27,7 +27,7 @@ header {
     padding: 0;
     background-color: var(--deep-purple);
     color: white;
-    padding: auto;
+    display: flex;
 }
 
 main {
@@ -156,9 +156,8 @@ This code breaks the single column into two
     font-size: 1.2em;
     line-height: 1;
     display: block;
-    text-align:center;
-    padding: 400px 0;
     text-shadow: 1px 1px #000;
+    margin: auto;
 
 }
 
@@ -166,7 +165,8 @@ This code breaks the single column into two
     font-family: monospace, sans-serif;
     font-size: .9em;
     font-weight: bolder;
-    padding-left: 50px;
+    text-align:center;
+    
 }
 
 .resume_button {
@@ -194,32 +194,7 @@ a:hover {
 
 /* Mobile Readiness */
 
-@media (max-width: 359px) {
-    #about {
-        padding: 0px;
-    }
-   
-    .introduction {
-        padding-top: 305px;
-        padding-bottom: 215px;
-        font-size: 1em;
-    }
-
-    .menu {
-        display: none;
-    }
-
-    
-    .lang-tools {
-        height: 15px;
-        width: 15px;
-    }
-
-    
-
-    }
-
-@media (max-width: 500px) and (min-width: 360px){
+@media (max-width: 500px){
 
 
     header {
@@ -239,17 +214,23 @@ a:hover {
     }
 
     .introduction {
-        padding-top: 250px;
-        padding-bottom: 165px;
+        font-size: .8em;
+
+    }
+
+    .wave {
+        font-size: .85em;
+    }
+
+    .button-container {
+        display:flex;
+        justify-content: center; 
     }
 
     .backgroundcircle {
-        height: 50px;
-        width: 50px;
-        display: inline-block;
+        padding: 1em;
         border-radius: 50%;
         background-color: rgba(103, 0, 200, 0.75);
-        margin-top: 100px;
     }   
 
     .arrow {
