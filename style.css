@@ -196,7 +196,6 @@ a:hover {
 
 @media (max-width: 500px){
 
-
     header {
         height: 700px;
     }
@@ -260,8 +259,5 @@ a:hover {
         height: 1440px;
     }
 
-    .introduction {
-        padding: 650px 0 700px 0;
-    }
 }
 
