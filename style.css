@@ -354,8 +354,8 @@ a:hover {
     flex-flow: inherit;
     position: absolute;
     display: flex;
-    right: 10px;
-    top: 0;
+    right: 15px;
+    top: 5px;
 }
 
 
@@ -366,7 +366,7 @@ a:hover {
 
 .nav a {
     padding: 0;
-    font-size: 1em;
+    font-size: .75em;
 }
 
 .nav a:hover {
