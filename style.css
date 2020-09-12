@@ -1,4 +1,6 @@
-/*--- Root  ---*/
+/* ================================= 
+            PETER'S BRANDING
+==================================== */
 
 :root {
     --deep-purple: #2E2238;
@@ -9,39 +11,51 @@
 
 }
 
-/*--- Base Styling ---*/
+/* ================================= 
+         BASE ELEMENTS
+==================================== */
 
+header,
 body {
-    margin: 0;
-    padding: 0;
-    font-family: monospace, sans-serif;
-    color: #595959;
+    display: flex;
 }
 
 header {
     background-image: linear-gradient(180deg, rgba(2,0,36,1) 0%, transparent, rgba(179,121,162,1) 100%), url(/images/hero-image.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    width:100%;
-    margin: 0;
-    padding: 0;
     background-color: var(--deep-purple);
     color: white;
-    display: flex;
+    flex-direction: column;
+    font-family: Helvetica, sans-serif;
+    min-height: 100vh;
+    width: 100%; 
 }
 
-main {
-    margin: 0 25%;
+body {
+    font-family: monospace, sans-serif;
+    color: #595959;
+    flex-direction: column;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    height: 0; /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 h1 {
-    background-color: transparent;
-    margin: 0;
+    font-size: 1.2em;
 }
 
-h3 {
-    margin-top: 15px;
+main {
+    padding: 0 .3em;
+    margin: auto;
+    padding-left: 15px;
 }
+
+
 
 footer {
     padding-top: 10px;
@@ -53,112 +67,148 @@ footer {
     font-size: .85em;
 }
 
-
-img.grayscale {
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
-  }
-  
-img.grayscale:hover {
-    filter: none;
-    -webkit-filter: grayscale(0%);
-}
+/* ================================= 
+         BASE STYLIZING
+==================================== */
 
 
-/*--- Navigation Menu ---*/
-.menu {
-    list-style-type: none;
-    margin: 0;
-    position: absolute;
-    top: 0;
-    right: 25px;
+/* Navigation */
+.nav,
+.nav a,
+.nav-container,
+.burger-container{
     display: flex;
 }
 
+.burger-container {
+    position: fixed;
+    display: flex;
+    z-index: 10;
+    flex-flow: column;
+    right: 1em;
+    top: 1em;
+}
 
-.menu li {
-    padding: 5px 5px;
+.hamburger-tbun {
+    border-bottom: 2px white solid;
+    margin: 0;
+    margin-bottom: 4px;
+    padding: 0;
+}
+
+.hamburger-filling {
+    border-bottom: 2px white solid;
+    margin: 0;
+    margin-bottom: 4px;
+    padding: 0;
+}
+
+.hamburger-bbun {
+    border-bottom: 2px white solid;
+    margin: 0;
+    margin-bottom: 4px;
+    padding: 0;
+    width: 30px;
+}
+
+
+.nav {
+    margin-top: 50px;
+    background-color: rgba(0,0,0,.75);
+    flex-direction: column;
+    order: -1;
+    list-style-type: none;
+    padding: 100px 0 0 0;
     text-align: center;
-    background-color: transparent;
+    margin: auto;
+    position: fixed;
+    overflow: hidden;
+    width: -webkit-fill-available;
+    z-index: 9;
+    height: -webkit-fill-available;
+    font-size: 1.25em;
 }
 
-.menu a{
+.nav-container { /* Hide menu links*/
+    z-index: 5;
+    flex-direction: column;
+}
+
+/* Hide and Show Class supporting Navigation*/
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.nav a {
+    flex-flow: column;
     color: white;
+    padding: 25px;
 }
 
-
-/* Body Content */
-
-.lang-tools {
-    height: 35px;
-    width: 35px;
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+.nav a:hover {
+    background-color: rgba(179, 121, 162, .45);
+    color:rgba(240, 240, 240, .75);
 }
 
-.lang-tools:hover {
-    filter: none;
-    -webkit-filter: grayscale(0%);
+/* Coming soon: Circular button for mobile */
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.backgroundcircle {
+    padding: 1em;
+    border-radius: 50%;
+    background-color: rgba(103, 0, 200, 0.75);
+}   
 
 .arrow {
-    display:none;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
   }
   
 
 .down {
-    display: none;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-top: 17.5px;
   }
 
-  .projects_current {
-      padding-top: 25px;
-  }
+/* Main content */
 
-/* Will activate this CSS coding as more projects get made. 
-This code breaks the single column into two 
-
-#projects {
-    width: 100%;
-    margin: 0 auto;;
-    display: flex;
-    flex-direction: row;
+.intro-container {
+    text-align:center;
+    align-items: center;
 }
 
-#projects li, #projects ul {
-    margin: 0;
-    padding: 0;
-    padding-top: 5px;
+.mainblur {
+    filter: blur(.4rem);
 }
 
-.projects_current {
-    height: 200px;
-    width: 155px; 
-    margin: auto;
-    padding: 0;
-}
-
-.projects_previous {
-    height: 200px;
-    width: 155px;
-    margin: auto;
-    padding: 0;
-} */
-
-/*--- Header Design ---*/
 .introduction {
-    font-family: Helvetica, sans-serif;
+    z-index: 0;
+    display: flex;
     font-weight: 500;
     letter-spacing: .5px;
     word-spacing: .5px;
-    font-size: 1.2em;
-    line-height: 1;
-    display: block;
+    font-size: 1.1em;
     text-shadow: 1px 1px #000;
-    margin: auto;
-
+    position: absolute;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+    width: 100%;
+    height: 100%;
 }
 
 .introduction-paragraph {
@@ -166,24 +216,88 @@ This code breaks the single column into two
     font-size: .9em;
     font-weight: bolder;
     text-align:center;
-    
 }
 
-.resume_button {
-    background-color:rgba(103, 0, 200, 0.25);
-    border:transparent;
-    border-radius: 5px;
+.container {
+    max-width: 1028px;
+    font-size: 1.1em;
+}
+
+.tool,
+.tool-img {
     display: flex;
-    padding: 15px;
-    flex-direction: row;
-    margin: auto; 
 }
 
+.tool {
+    flex-direction: column;
+}
 
-/*--- Psuedo Classes/hyperlinking ---*/
+.tool-img {
+    flex-wrap: wrap;
+    padding-bottom: 5px;
+    justify-content: flex-start;
+    max-width: 500px;
+    place-items: flex-end;
+    z-index: 1;
+}
+
+.lang-tools { /* Set images in learning section to grey */
+    width: 2em;
+    height: 2em;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.lang-tools:hover { /* Bring back the image colors */
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+
+.resumediv{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    place-items: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+
+ .resume-previous {
+     padding-bottom: 15px;
+ } 
+
+/* button styling while not hovering */
+.resume_button {
+    font-size: .85em;
+    width: 175px;
+    height: 55px;
+    background-color:var(--mid-purple);
+    text-align: center;
+    box-direction: none;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 0.5px;
+    border-radius: 5px;
+    color: white;
+    outline : none;
+}
+
+/* these are the button effects on hover */
+.resume_button:hover {
+    background-color: var(--bubble-gum-pink)
+}
+
+/* Psuedoclasses for Hyperlinks */
+
+
 a {
     text-decoration: none;
-    color: purple;
+    color:var(--mid-purple);
     font-weight: bold;
 }
 
@@ -192,61 +306,99 @@ a:hover {
     text-decoration: none;
 }
 
-/* Mobile Readiness */
 
-@media (max-width: 500px){
+/* ================================= 
+         MEDIA QUERIES
+==================================== */
 
-    main {
-        margin: 0 12%;
-    }
-
+/* Tablets and iPads */
+@media (min-width: 480px) {
     body {
-      font-size:.85em;
+      font-size: 1.1em;
     }
 
-    .menu {
-        display: none;
+    .intro-container {
+        font-size: 1.2em;
     }
 
-    .introduction {
-        font-size: .8em;
+  }
 
+
+/* Small and Medium Screens */
+
+@media (min-width: 780px) {
+    body {
+      font-size: 1.1em;
     }
 
-    .wave {
-        font-size: .85em;
-    }
-
-    .button-container {
-        display:flex;
-        justify-content: center; 
-    }
-
-    .backgroundcircle {
-        padding: 1em;
-        border-radius: 50%;
-        background-color: rgba(103, 0, 200, 0.75);
-    }   
-
-    .arrow {
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 5px;
-      }
-      
-    
-    .down {
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        margin-top: 17.5px;
-      }
-
-      .lang-tools {
-        height: 20px;
-        width: 20px;
-    }
-    
-    
+/*--- Navigation Menu ---*/
+.burger-container {
+    display:none;
 }
 
+.hide {
+    padding: 0;
+}
+
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    list-style-type: none;
+    position: absolute;
+    padding: 0;
+}
+
+.nav-container {
+    flex-flow: inherit;
+    position: absolute;
+    display: flex;
+    right: 10px;
+    top: 0;
+}
+
+
+.nav a,
+.nav li {
+    padding-left: 15px;
+}
+
+.nav a {
+    padding: 0;
+    font-size: 1em;
+}
+
+.nav a:hover {
+    margin: 0;
+    background-color: transparent;
+    color: var(--bubble-gum-pink);
+}
+
+
+/* button styling while not hovering */
+.resume_button {
+    transition: all 1.2s;
+    font-size: .85em;
+    width: 175px;
+    height: 55px;
+    background-color:var(--mid-purple);
+    text-align: center;
+    box-direction: none;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 0.5px;
+    border-radius: 5px;
+    color: white;
+    outline : none;
+}
+/* these are the button effects on hover */
+.resume_button:hover {
+    transition: all 1s;
+    width: 300px;
+    border-radius: 35px;
+    font-size: .95em;
+    background-color: var(--bubble-gum-pink)
+} 
+
+}
