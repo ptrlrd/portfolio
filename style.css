@@ -379,8 +379,8 @@ a:hover {
 /* button styling while not hovering */
 .resume_button {
     transition: all 1.2s;
-    font-size: .85em;
-    width: 175px;
+    font-size: .90em;
+    width: 185px;
     height: 55px;
     background-color:var(--mid-purple);
     text-align: center;
