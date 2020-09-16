@@ -22,3 +22,12 @@ function toggle() { /** Target navigation -- open and close it when menu button 
 		nav.classList.add('hide') & blurMain.classList.remove('mainblur') & navContainer.classList.remove('mainblur');
 	  }
   }
+
+
+document.addEventListener('keydown', (e)=> {
+konamiPosition =  (e.keyCode === konamiCode[konamiPosition]) ? konamiPosition + 1 : 0;
+if (konamiPosition == konamiCode.length) {
+let name = prompt("Hello! You're a gamer.. please tell me your name.");
+alert(`Well, hello there ${name}! You've unlocked the Konami Code, nothing has changed on this website, but thank you for finding this easter egg.`);
+}
+})
