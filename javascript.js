@@ -28,7 +28,7 @@ const konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]; // Konami Code
 let konamiPosition = 0; // Set position sequence
 
 document.addEventListener('keydown', (e)=> { // pass through e to function
-konamiPosition =  (e.keyCode === konamiCode[konamiPosition]) ? konamiPosition + 1 : 0; 
+konamiPosition =  (e.keyCode === konamiCode[konamiPosition]) ? konamiPosition + 1 : 0; // Ternary operator (?) was used to either reset konamiposition to 1 or default to 0
 if (konamiPosition == konamiCode.length) { // compare position with konamicode length
 	let name = prompt("Hello! You're a gamer.. please tell me your name.");
 	alert(`Well, hello there ${name}! You've unlocked the Konami Code, nothing has changed on this website, but thank you for finding this easter egg.`);
