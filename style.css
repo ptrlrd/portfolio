@@ -589,15 +589,19 @@ footer {
 
 .tool-img,
 .tool svg {
-    flex-wrap: wrap;
-    padding-bottom: 5px;
-    justify-content: flex-start;
-    max-width: 850px;
-    place-items: flex-end;
-    z-index: 1;
-    display: flex;
-    flex-basis: 50px;
-    height: 50px;
+  padding-bottom: 5px;
+  justify-content: flex-start;
+  max-width: 850px;
+  place-items: flex-end;
+  z-index: 1;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.tool svg {
+  height: 72px;
+  width: 72px;
 }
 
 .lang-tools { /* Set images in learning section to grey */
