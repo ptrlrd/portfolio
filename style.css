@@ -579,7 +579,7 @@ footer {
 }
 
 .tool,
-.tool-img {
+.tool svg {
     display: flex;
 }
 
@@ -587,7 +587,8 @@ footer {
     flex-direction: column;
 }
 
-.tool-img {
+.tool-img,
+.tool svg {
     flex-wrap: wrap;
     padding-bottom: 5px;
     justify-content: flex-start;
