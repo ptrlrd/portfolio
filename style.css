@@ -595,6 +595,9 @@ footer {
     max-width: 850px;
     place-items: flex-end;
     z-index: 1;
+    display: flex;
+    flex-basis: 50px;
+    height: 50px;
 }
 
 .lang-tools { /* Set images in learning section to grey */
