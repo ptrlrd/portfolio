@@ -26,8 +26,9 @@ xhr.onreadystatechange = function () {
         for (let i = 0; i < freecompany.FreeCompanyMembers.length; i++){
             console.log(`${freecompany.FreeCompanyMembers[i].Name}`)
             let fcMember = freecompany.FreeCompanyMembers[i].Name
-            document.querySelector('memberlist').innerHTML = fcMember;
         }
+        
+        document.querySelector('memberlist').innerHTML = fcMember;
     }
 }
 xhr.open('GET', 'https://xivapi.com/freecompany/9228157111458900661?data=FCM');
