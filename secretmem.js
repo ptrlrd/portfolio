@@ -22,9 +22,13 @@
 let xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function () {
         if(xhr.readyState === 4 && xhr.status === 200){
-        let freecompany = JSON.parse(xhr.responseText);
-        console.log('Connected');
+        const freecompany = JSON.parse(xhr.responseText);
+        for (let i = 0; i < freecompany.FreeCompanyMembers.length; i++){
+            console.log(`${freecompany.FreeCompanyMembers[i].Name}`)
+        }
     }
 }
 xhr.open('GET', 'https://xivapi.com/freecompany/9228157111458900661?data=FCM');
 xhr.send();
+
+// Path freecompany.FreeCompanyMembers[0].Name
