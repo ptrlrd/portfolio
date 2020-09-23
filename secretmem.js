@@ -24,7 +24,7 @@ xhr.onreadystatechange = function () {
         if(xhr.readyState === 4 && xhr.status === 200){
         const freecompany = JSON.parse(xhr.responseText);
         let fcMember = `<ul class="bulleted">`
-        for (let i = 0; i < freecompany.FreeCompanyMembers.length; i++){
+        for (let i = 0; i < freecompany.FreeCompany.ActiveMemberCount; i++){
             console.log(`${freecompany.FreeCompanyMembers[i].Name}`)
             fcMember += `<li>`
             fcMember += freecompany.FreeCompanyMembers[i].Name
