@@ -25,8 +25,8 @@ xhr.onreadystatechange = function () {
         const freecompany = JSON.parse(xhr.responseText);
         for (let i = 0; i < freecompany.FreeCompanyMembers.length; i++){
             console.log(`${freecompany.FreeCompanyMembers[i].Name}`)
-	    let fcMember = `${freecompany.FreeCompanyMembers[i].Name}`
-	    document.querySelector('memberlist').innerText = fcMember;
+	    let fcMember = freecompany.FreeCompanyMembers[i].Name
+	    document.getElementByClassName('memberlist').innerHTML = fcMember;
         }
     }
 }
