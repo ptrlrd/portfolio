@@ -31,6 +31,7 @@ xhr.onreadystatechange = function () {
             fcMember += `<li>`;
             fcMember += freecompany.FreeCompanyMembers[i].Name;
             fcMember += `</li>`;
+            console.log(fcMember)
             }
         
         fcMember += `</ul>`;
