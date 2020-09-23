@@ -25,12 +25,18 @@ xhr.onreadystatechange = function () {
         const memberlist = document.querySelector('.memberlist')
         let freecompany = JSON.parse(xhr.responseText);
         
-        let fcMember = `<table><tr><th>Character Name</th></tr>`;
+        let fcMember = `<table><tr><th>Display Photo</th><th>Character Name</th><th>Character Rank</th></tr>`;
         
         for (let i = 0; i < freecompany.FreeCompany.ActiveMemberCount; i += 1) {
             // console.log(`${freecompany.FreeCompanyMembers[i].Name}`);
-            fcMember += '<tr><td>';
+            fcMember += '<tr><td><img src="';
+            fcMember += freecompany.FreeCompanyMembers[i].Avatar;
+            fcMember += '"></td>';
+            fcMember += `<td><a href="https://na.finalfantasyxiv.com/lodestone/character/${freecompany.FreeCompanyMembers[i].ID}" target="_blank" rel="noopener noreferrer">`;
             fcMember += freecompany.FreeCompanyMembers[i].Name;
+            fcMember += `</a></td>`;
+            fcMember += '<td>';
+            fcMember += freecompany.FreeCompanyMembers[i].Rank;
             fcMember += '</td></tr>';
             // console.log(fcMember)
             }
