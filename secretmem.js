@@ -25,13 +25,13 @@ xhr.onreadystatechange = function () {
         const memberlist = document.querySelector('.memberlist')
         let freecompany = JSON.parse(xhr.responseText);
         
-        let fcMember = `<table><th>Character Name</th>`;
+        let fcMember = `<table><tr><th>Character Name</th></tr>`;
         
         for (let i = 0; i < freecompany.FreeCompany.ActiveMemberCount; i += 1) {
             // console.log(`${freecompany.FreeCompanyMembers[i].Name}`);
-            fcMember += '<tr>';
+            fcMember += '<tr><td>';
             fcMember += freecompany.FreeCompanyMembers[i].Name;
-            fcMember += '</tr>';
+            fcMember += '</td></tr>';
             // console.log(fcMember)
             }
         
