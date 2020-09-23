@@ -28,7 +28,7 @@ xhr.onreadystatechange = function () {
             console.log(`${freecompany.FreeCompanyMembers[i].Name}`)
             fcMember += freecompany.FreeCompanyMembers[i].Name
             }
-        document.querySelector('memberlist').innerHTML = fcMember;
+        document.getElementsByClassName('memberlist').innerHTML = fcMember;
     }
 }
 xhr.open('GET', 'https://xivapi.com/freecompany/9228157111458900661?data=FCM');
