@@ -23,10 +23,12 @@ let xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function () {
         if(xhr.readyState === 4 && xhr.status === 200){
         const freecompany = JSON.parse(xhr.responseText);
-        let fcMember = 0;
+        let fcMember = `<ul class="bulleted">`
         for (let i = 0; i < freecompany.FreeCompanyMembers.length; i++){
             console.log(`${freecompany.FreeCompanyMembers[i].Name}`)
+            fcMember += `<li>`
             fcMember += freecompany.FreeCompanyMembers[i].Name
+            fcMember += `</li>`
             }
         document.getElementsByClassName('memberlist').innerHTML = fcMember;
     }
