@@ -37,7 +37,7 @@ xhr.onreadystatechange = function () {
         
         fcMember += `</ul>`;
         console.log(fcMember);
-        memberlist.innerHTML = fcMember;
+        memberlist.textContent = fcMember;
     }
 };
 xhr.open('GET', 'https://xivapi.com/freecompany/9228157111458900661?data=FCM');
