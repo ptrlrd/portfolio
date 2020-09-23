@@ -24,16 +24,16 @@ xhr.onreadystatechange = function () {
     if(xhr.readyState === 4 && xhr.status === 200) {
         let freecompany = JSON.parse(xhr.responseText);
         
-        let fcMember = `<ul class="bulleted">`
+        let fcMember = `<ul>`;
         
         for (let i = 0; i < freecompany.FreeCompany.ActiveMemberCount; i++) {
-            console.log(`${freecompany.FreeCompanyMembers[i].Name}`)
-            fcMember += `<li>`
-            fcMember += freecompany.FreeCompanyMembers[i].Name
-            fcMember += `</li>`
+            console.log(`${freecompany.FreeCompanyMembers[i].Name}`);
+            fcMember += `<li>`;
+            fcMember += freecompany.FreeCompanyMembers[i].Name;
+            fcMember += `</li>`;
             }
         
-        fcMember += `</ul>`
+        fcMember += `</ul>`;
         document.getElementsByClassName('memberlist').innerHTML = fcMember;
     }
 };
