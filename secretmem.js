@@ -33,7 +33,7 @@ xhr.onreadystatechange = function () {
             fcMember += `</li>`
             }
         
-        let fcMember =`</ul>`
+        fcMember += `</ul>`
         document.getElementsByClassName('memberlist').innerHTML = fcMember;
     }
 };
