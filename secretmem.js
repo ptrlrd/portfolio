@@ -26,11 +26,11 @@ xhr.onreadystatechange = function () {
         
         let fcMember = `<ul>`;
         
-        for (let i = 0; i < freecompany.FreeCompany.ActiveMemberCount; i++) {
+        for (let i = 0; i < freecompany.FreeCompany.ActiveMemberCount; i += 1) {
             console.log(`${freecompany.FreeCompanyMembers[i].Name}`);
-            fcMember += `<li>`;
+            fcMember += '<li>';
             fcMember += freecompany.FreeCompanyMembers[i].Name;
-            fcMember += `</li>`;
+            fcMember += '</li>';
             console.log(fcMember)
             }
         
