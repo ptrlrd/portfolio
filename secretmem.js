@@ -21,18 +21,22 @@
 
 let xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function () {
-        if(xhr.readyState === 4 && xhr.status === 200){
+    if(xhr.readyState === 4 && xhr.status === 200) {
         let freecompany = JSON.parse(xhr.responseText);
+        
         let fcMember = `<ul class="bulleted">`
-        for (let i = 0; i < freecompany.FreeCompany.ActiveMemberCount; i++){
+        
+        for (let i = 0; i < freecompany.FreeCompany.ActiveMemberCount; i++) {
             console.log(`${freecompany.FreeCompanyMembers[i].Name}`)
             fcMember += `<li>`
             fcMember += freecompany.FreeCompanyMembers[i].Name
             fcMember += `</li>`
             }
-        document.querySelector('memberlist').innerHTML = fcMember;
+        
+        let fcMember =`</ul>`
+        document.getElementsByClassName('memberlist').innerHTML = fcMember;
     }
-}
+};
 xhr.open('GET', 'https://xivapi.com/freecompany/9228157111458900661?data=FCM');
 xhr.send();
 
