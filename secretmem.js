@@ -22,7 +22,7 @@
 let xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function () {
         if(xhr.readyState === 4 && xhr.status === 200){
-        const freecompany = JSON.parse(xhr.responseText);
+        let freecompany = JSON.parse(xhr.responseText);
         let fcMember = `<ul class="bulleted">`
         for (let i = 0; i < freecompany.FreeCompany.ActiveMemberCount; i++){
             console.log(`${freecompany.FreeCompanyMembers[i].Name}`)
@@ -30,7 +30,7 @@ xhr.onreadystatechange = function () {
             fcMember += freecompany.FreeCompanyMembers[i].Name
             fcMember += `</li>`
             }
-        document.getElementsByClassName('memberlist').innerHTML = fcMember;
+        document.querySelector('memberlist').innerHTML = fcMember;
     }
 }
 xhr.open('GET', 'https://xivapi.com/freecompany/9228157111458900661?data=FCM');
