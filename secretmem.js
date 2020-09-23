@@ -22,6 +22,7 @@
 let xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function () {
     if(xhr.readyState === 4 && xhr.status === 200) {
+        const memberlist = document.getElementsByClassName('memberlist')
         let freecompany = JSON.parse(xhr.responseText);
         
         let fcMember = `<ul>`;
@@ -36,7 +37,7 @@ xhr.onreadystatechange = function () {
         
         fcMember += `</ul>`;
         console.log(fcMember);
-        document.getElementsByClassName('memberlist').innerHTML = fcMember;
+        memberlist.innerHTML = fcMember;
     }
 };
 xhr.open('GET', 'https://xivapi.com/freecompany/9228157111458900661?data=FCM');
