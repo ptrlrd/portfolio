@@ -1,57 +1,73 @@
-// let xhr = new XMLHttpRequest();
-// xhr.onreadystatechange = function () {
-//     if(xhr.readyState === 4 && xhr.status === 200) {
-//         const memberlist = document.querySelector('.memberlist')
-//         let freecompany = JSON.parse(xhr.responseText);
-        
-//         let fcMember = `<table><tr><th>Display Photo</th><th>Character Name</th><th>Character Rank</th></tr>`;
-        
-//         for (let i = 0; i < freecompany.FreeCompany.ActiveMemberCount; i += 1) {
-//             // console.log(`${freecompany.FreeCompanyMembers[i].Name}`);
-//             fcMember += `Welcome to `;
-//             fcMember += '<tr><td><img src="';
-//             fcMember += freecompany.FreeCompanyMembers[i].Avatar;
-//             fcMember += '"></td>';
-//             fcMember += `<td><a href="https://na.finalfantasyxiv.com/lodestone/character/${freecompany.FreeCompanyMembers[i].ID}" target="_blank" rel="noopener noreferrer">`;
-//             fcMember += freecompany.FreeCompanyMembers[i].Name;
-//             fcMember += `</a></td>`;
-//             fcMember += '<td>';
-//             fcMember += freecompany.FreeCompanyMembers[i].Rank;
-//             fcMember += '</td></tr>';
-//             // console.log(fcMember)
-//             }
-        
-//         fcMember += `</table>`;
-//         console.log(fcMember);
-//         memberlist.innerHTML = fcMember;
-//     }
-// };
-// xhr.open('GET', 'https://xivapi.com/freecompany/9228157111458900661?data=FCM');
-// xhr.send();
+const url = 'https://xivapi.com/freecompany/9228157111458900661?data=FCM'
+const memberList = document.querySelector('.memberlist')
 
-let xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function () {
-    if(xhr.readyState === 4 && xhr.status === 200) {
-        const memberlist = document.querySelector('.memberlist')
-        let freecompany = JSON.parse(xhr.responseText);
-        let fcMember = `<table><tr><th>Display Photo</th><th>Character Name</th><th>Character Rank</th></tr>`;
-        for (let i = 0; i < freecompany.FreeCompany.ActiveMemberCount; i += 1) {
-            if (freecompany.FreeCompanyMembers[i].Rank == "Jr. Officer" || freecompany.FreeCompanyMembers[i].Rank == "Officer" || freecompany.FreeCompanyMembers[i].Rank == "Leader" || freecompany.FreeCompanyMembers[i].ID === 10211535 ) {
-                fcMember += '<tr><td><img src="';
-                fcMember += freecompany.FreeCompanyMembers[i].Avatar;
-                fcMember += '"></td>';
-                fcMember += `<td><a href="https://na.finalfantasyxiv.com/lodestone/character/${freecompany.FreeCompanyMembers[i].ID}" target="_blank" rel="noopener noreferrer">`;
-                fcMember += freecompany.FreeCompanyMembers[i].Name;
-                fcMember += `</a></td>`;
-                fcMember += '<td>';
-                fcMember += freecompany.FreeCompanyMembers[i].Rank;
-                fcMember += '</td></tr>';
-            }};
-        
-        fcMember += `</table>`;
+fetch(url)
+    .then(checkStatus)
+    .then(res => res.json())
+    .then(data => generateMemberList(data))
+    .catch(error => console.log('Something broke:', error))
+
+/// Functions
+
+function checkStatus(response) {
+    if (response.ok) {
+        return Promise.resolve(response)
+    } else {
+        return Promise.reject(new Error(response.statusText));
+    }
+}
+
+function generateMemberList(data) {
+        let fcMember = `<table>`;
+        for (let i = 0; i < data.FreeCompany.ActiveMemberCount; i += 1) {
+            if (data.FreeCompanyMembers[i].Rank == "Jr. Officer" || data.FreeCompanyMembers[i].Rank == "Officer" || data.FreeCompanyMembers[i].Rank == "Leader" || data.FreeCompanyMembers[i].ID === 10211535 ) {
+                 if (  Number.isInteger(i/4) === true) {
+                    fcMember += '<tr><td><img src="';
+                    fcMember += data.FreeCompanyMembers[i].Avatar;
+                    fcMember += '"></td>';
+                    fcMember += `<td><a href="https://na.finalfantasyxiv.com/lodestone/character/${data.FreeCompanyMembers[i].ID}" target="_blank" rel="noopener noreferrer">`;
+                    fcMember += data.FreeCompanyMembers[i].Name;
+                    fcMember += `</a></td>`;
+                 } else {
+                    fcMember += '<td><img src="';
+                    fcMember += data.FreeCompanyMembers[i].Avatar;
+                    fcMember += '"></td>';
+                    fcMember += `<td><a href="https://na.finalfantasyxiv.com/lodestone/character/${data.FreeCompanyMembers[i].ID}" target="_blank" rel="noopener noreferrer">`;
+                    fcMember += data.FreeCompanyMembers[i].Name;
+                    fcMember += `</a></td>`;
+                }
+            }
+        };
+            
+        fcMember += `</tr></table>`;
         console.log(fcMember);
-        memberlist.innerHTML = fcMember;
+        memberList.innerHTML = fcMember;
+}
+
+
+/*
+for (let i = 0; i < data.FreeCompany.ActiveMemberCount; i += 1) {
+    if (data.FreeCompanyMembers[i].Rank == "Jr. Officer" || data.FreeCompanyMembers[i].Rank == "Officer" || data.FreeCompanyMembers[i].Rank == "Leader" || data.FreeCompanyMembers[i].ID === 10211535 ) {
+        fcMember += '<td><img src="';
+        fcMember += data.FreeCompanyMembers[i].Avatar;
+        fcMember += '"></td>';
+        fcMember += `<td><a href="https://na.finalfantasyxiv.com/lodestone/character/${data.FreeCompanyMembers[i].ID}" target="_blank" rel="noopener noreferrer">`;
+        fcMember += data.FreeCompanyMembers[i].Name;
+        fcMember += `</a></td>`;
+    } else if ( i && (i%4 === 1) ) {
+        fcMember += `<tr>`;
     }
 };
-xhr.open('GET', 'https://xivapi.com/freecompany/9228157111458900661?data=FCM');
-xhr.send();
+
+
+                if ( ) {
+                    fcMember += `<tr>`;
+                } else {
+                    fcMember += '<td><img src="';
+                    fcMember += data.FreeCompanyMembers[i].Avatar;
+                    fcMember += '"></td>';
+                    fcMember += `<td><a href="https://na.finalfantasyxiv.com/lodestone/character/${data.FreeCompanyMembers[i].ID}" target="_blank" rel="noopener noreferrer">`;
+                    fcMember += data.FreeCompanyMembers[i].Name;
+                    fcMember += `</a></td>`;
+                }
+*/
