@@ -39,7 +39,7 @@ function generateMemberList(data) {
             }
         };
             
-        fcMember += `</tr></table>`;
+        fcMember += `</table>`;
         console.log(fcMember);
         memberList.innerHTML = fcMember;
 }
