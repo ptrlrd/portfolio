@@ -1,3 +1,10 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+ErrorDocument 404 /
+ErrorDocument 403 /
+ErrorDocument 500 /
+</IfModule>
+
 <IfModule mod_expires.c>	
     ExpiresActive On	
 
