@@ -1,8 +1,8 @@
 //Rewrite to www
 Options +FollowSymLinks
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^ptrlrd.com[nc]
-RewriteRule ^(.*)$ http://www.ptrlrd.com/$1 [r=301,nc]
+RewriteCond %{HTTP_HOST} ^ptrlrd\.com
+RewriteRule .* http://www.%{SERVER_NAME}%{REQUEST_URI} [R,L]
 
 //Custom 400 errors
 ErrorDocument 400 /
