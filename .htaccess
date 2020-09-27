@@ -1,3 +1,6 @@
+Redirect 301  /
+Redirect 404 /
+
 <IfModule mod_expires.c>
     ExpiresActive On
 
