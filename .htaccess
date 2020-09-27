@@ -1,20 +1,42 @@
-//Rewrite to www
-Options +FollowSymLinks
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^ptrlrd\.com
-RewriteRule .* http://www.%{SERVER_NAME}%{REQUEST_URI} [R,L]
 
-//Custom 400 errors
-ErrorDocument 400 /
+# Redirect to domain without www.
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule .* http://%1%{REQUEST_URI} [R=301,L]
+# Same for HTTPS:
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule .* https://%1%{REQUEST_URI} [R=301,L]
 
-//Custom 401 errors
-ErrorDocument 401 /
+# Add Caching.
+<FilesMatch ".(ico|jpg|jpeg|png|gif|js|css|swf)$">
+    Header set Cache-Control "max-age=31536000"
+</FilesMatch>
 
-//Custom 403 errors
-ErrorDocument 403 /
+# Custom error pages.
+ErrorDocument 400 /index.html
+ErrorDocument 401 /index.html
+ErrorDocument 403 /index.html
+ErrorDocument 404 /index.html
+ErrorDocument 500 /index.html
 
-//Custom 404 errors
-ErrorDocument 404 /
+# Prevent viewing of htaccess file.
+<Files .htaccess>
+    order allow,deny
+    deny from all
+</Files>
 
-//Custom 500 errors
-ErrorDocument 500 /
+# Prevent directory listings
+Options All -Indexes
+
+# Compress text, html, javascript, css, xml:
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
