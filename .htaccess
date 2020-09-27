@@ -1,7 +1,19 @@
 
 RewriteEngine On
+
+RedirectMatch 404 /\.git
+
 RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://ptrlrd.com%{REQUEST_URI} [L,R=301]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^www\.
+RewriteRule ^(.*)$ https://ptrlrd.com/ [R=301,L]
+
+ErrorDocument 401 /401
+ErrorDocument 403 /403
+ErrorDocument 404 /404
+ErrorDocument 429 /429
+ErrorDocument 500 /500
 
 
 <IfModule mod_expires.c>	
