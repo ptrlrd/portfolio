@@ -1,23 +1,9 @@
-//Rewrite to www
-Options +FollowSymLinks
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^ptrlrd.com[nc]
-RewriteRule ^(.*)$ http://www.ptrlrd.com/$1 [r=301,nc]
-
-//Custom 400 errors
-ErrorDocument 400 /
-
-//Custom 401 errors
-ErrorDocument 401 /
-
-//Custom 403 errors
-ErrorDocument 403 /
-
-//Custom 404 errors
-ErrorDocument 404 /
-
-//Custom 500 errors
-ErrorDocument 500 /
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTPS} !on [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://ptrlrd.com%{REQUEST_URI} [R=302,L,NE]
+</IfModule>
 
 <IfModule mod_expires.c>	
     ExpiresActive On	
