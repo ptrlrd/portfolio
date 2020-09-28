@@ -14,12 +14,17 @@ RewriteRule .* https://%1%{REQUEST_URI} [R=301,L]
     Header set Cache-Control "max-age=31536000"
 </FilesMatch>
 
+# Redirects
+
+Redirect 301 "/twitter" http://twitter.com/ptrlrd
+
 # Custom error pages.
 ErrorDocument 400 /index.html
 ErrorDocument 401 /index.html
 ErrorDocument 403 /index.html
 ErrorDocument 404 /index.html
 ErrorDocument 500 /index.html
+
 
 # Prevent viewing of htaccess file.
 <Files .htaccess>
