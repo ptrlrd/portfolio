@@ -21,6 +21,7 @@ Redirect 301 "/linkedin" https://www.linkedin.com/in/ptrlrd/
 Redirect 301 "/github" https://github.com/ptrlrd
 Redirect 301 "/blog" https://medium.com/@ptrlrd
 Redirect 301 "/medium" https://medium.com/@ptrlrd
+Redirect 301 "/discord" https://discord.gg/xMsTBeh
 
 # Custom error pages.
 ErrorDocument 400 /index.html
