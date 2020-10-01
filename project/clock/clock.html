@@ -22,8 +22,13 @@
         <br>
         <br><span style="font-size: 50px; color:gold; -webkit-text-stroke: 1px black; font-family: arial;"><strong>YEP</strong> </span>
       </div>
+      <br>
+      <br>
+      <br>
+      <div>
+        It is currently: <span class="timeNow"></span> in CA
+      </div>
     </div>
-
 
   <style>
     html {
@@ -89,7 +94,19 @@
 const hourHand = document.querySelector('.hour-hand')
 const minHand = document.querySelector('.min-hand')
 const secondHand = document.querySelector('.second-hand')
+let thetime = document.querySelector('.timeNow')
 
+function timeNow() {
+  const now = new Date()
+  const hours = now.getHours()
+  const minutes = now.getMinutes()
+  const seconds = now.getSeconds()
+  const milliseconds = now.getMilliseconds()
+
+  thetime.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`;
+} setInterval(timeNow, 10);
+
+timeNow()
 
 function setDate() {
   const now = new Date()
