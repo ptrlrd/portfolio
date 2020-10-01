@@ -98,7 +98,7 @@ let thetime = document.querySelector('.timeNow')
 
 function timeNow() {
   const now = new Date()
-  const hours = now.getHours()
+  const hours = now.getHours() - 12
   const minutes = now.getMinutes()
   const seconds = now.getSeconds()
   const milliseconds = now.getMilliseconds()
