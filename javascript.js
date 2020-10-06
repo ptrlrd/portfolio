@@ -7,6 +7,7 @@ const navContainer = document.querySelector('.intro-container');
 const topBun = document.querySelector('.hamburger-tbun')
 const filling = document.querySelector('.hamburger-filling')
 const bottomBun = document.querySelector('.hamburger-bbun')
+const introContainer = document.querySelector('.introduction')
 
 burger.addEventListener('click', () => {
 	if(nav.classList.contains('hide')){
@@ -32,7 +33,7 @@ menuLinks.addEventListener('click', () => {
 	})
 
 window.addEventListener('scroll', () => {
-	if ( (window.scrollY * 1.05) > window.outerHeight ) {
+	if ( window.scrollY >= introContainer.offsetHeight ) {
 		topBun.classList.remove('burger-yum');
 		topBun.classList.add('burger-burnt');
 		filling.classList.remove('burger-yum');
