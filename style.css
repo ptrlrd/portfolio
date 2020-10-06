@@ -428,12 +428,22 @@ footer {
 
 
 /* Navigation */
+
 .nav,
 .nav a,
 .nav-container,
 .burger-container{
     display: flex;
 }
+
+.burger-yum {
+  background-color: white;
+}
+
+.burger-burnt {
+  background-color: purple;
+}
+
 
 .burger-container {
     position: fixed;
@@ -445,25 +455,24 @@ footer {
 }
 
 .hamburger-tbun {
-    border-bottom: 2px white solid;
-    margin: 0;
-    margin-bottom: 4px;
-    padding: 0;
+  margin: 0;
+  margin-bottom: 4px;
+  border: 1px transparent solid;
+  width: 25px;
 }
 
 .hamburger-filling {
-    border-bottom: 2px white solid;
-    margin: 0;
-    margin-bottom: 4px;
-    padding: 0;
+  margin: 0;
+  margin-bottom: 4px;
+  border: 1px transparent solid;
+  width: 25px;
 }
 
 .hamburger-bbun {
-    border-bottom: 2px white solid;
-    margin: 0;
-    margin-bottom: 4px;
-    padding: 0;
-    width: 30px;
+  margin: 0;
+  margin-bottom: 4px;
+  border: 1px transparent solid;
+  width: 25px;
 }
 
 
