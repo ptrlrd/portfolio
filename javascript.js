@@ -32,7 +32,7 @@ menuLinks.addEventListener('click', () => {
 	})
 
 window.addEventListener('scroll', (e) => {
-	if ( (window.scrollY / .95) >= window.outerHeight ) {
+	if ( (window.scrollY / .98) >= window.outerHeight ) {
 		console.log(scrollY)
 		topBun.classList.remove('burger-yum');
 		topBun.classList.add('burger-burnt');
