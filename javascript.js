@@ -31,9 +31,8 @@ menuLinks.addEventListener('click', () => {
 	  }
 	})
 
-window.addEventListener('scroll', (e) => {
+window.addEventListener('scroll', () => {
 	if ( window.scrollY >= window.outerHeight ) {
-		console.log(scrollY)
 		topBun.classList.remove('burger-yum');
 		topBun.classList.add('burger-burnt');
 		filling.classList.remove('burger-yum');
