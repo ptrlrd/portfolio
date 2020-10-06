@@ -33,7 +33,7 @@ menuLinks.addEventListener('click', () => {
 	})
 
 window.addEventListener('scroll', () => {
-	if ( window.scrollY >= introContainer.offsetHeight ) {
+	if ( window.scrollY > introContainer.offsetHeight ) {
 		topBun.classList.remove('burger-yum');
 		topBun.classList.add('burger-burnt');
 		filling.classList.remove('burger-yum');
