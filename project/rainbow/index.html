@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mouse Shadow</title>
+</head>
+<body>
+
+  <div class="hero">
+    <h1 contenteditable>💩 Poop is cool 🔥 </h1>
+  </div>
+
+  <style>
+  html {
+    color: black;
+    font-family: sans-serif;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
+
+  h1 {
+    text-shadow: 10px 10px 0 rgba(0,0,0,1);
+    font-size: 100px;
+  }
+  </style>
+
+<script>
+  const hero = document.querySelector(".hero");
+  const text = hero.querySelector('h1');
+
+  function shadow(e) {
+    const {offsetWidth: width, offsetHeight: height}  = hero;
+    let {offsetX : x, offsetY: y} = e;
+    const walk = 100; //100 px
+
+    if (this !== e.target){
+      x = x + e.target.offsetLeft;
+      y = y + e.target.offsettop;
+    }
+
+    const xWalk = Math.round(x / width * walk) - (walk / 2);
+    const yWalk = Math.round(y / height * walk) - (walk / 2);
+
+  text.style.textShadow = `${xWalk*2}px ${yWalk*2}px 0 #FF0000,
+                           ${xWalk*4}px ${yWalk*4}px 0 #FF7F00,
+                           ${xWalk*6}px ${yWalk*6}px 0 #FFFF00,
+                           ${xWalk*8}px ${yWalk*8}px 0 #00FF00,
+                           ${xWalk*10}px ${yWalk*10}px 0 #0000FF,
+                           ${xWalk*12}px ${yWalk*12}px 0 #4B0082,
+                           ${xWalk*14}px ${yWalk*14}px 0 #9400D3`;
+
+  }
+
+  hero.addEventListener('mousemove', shadow);
+
+</script>
+</body>
+</html>
