@@ -24,7 +24,10 @@ function paintToCanvas() {
 
     setInterval(()=>{
         ctx.drawImage(video, 0,0, width, height);
-    },16 )
+        let pixels = ctx.getImageData(0,0, width, height); // takes out pixels
+        pixels = redEffect(pixels); // mess with pixels
+        ctx.putImageData(pixels, 0, 0); // puts pixels in red field
+    }, 16)
 }
 
 function takePhoto() {
@@ -41,6 +44,17 @@ function takePhoto() {
     link.innerHTML = `<img src="${data}" alt="beautiful">`;
     strip.insertBefore(link, strip.firstChild);
 }
+
+function redEffect(pixels) {
+    for(let i = 0; i < pixels.length; i += 4) {
+        pixels[i] // r
+        pixels[i + 1] // g
+        pixels[i + 2] // b
+    }
+
+    return pixels
+}
+
 
 getVideo();
 
