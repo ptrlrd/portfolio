@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25 Second timer</title>
+</head>
+<body style="font-size: 30px;">
+    Time left until next command <span class="timer" style="color:red;">
+    
+</body>
+<script>
+let timer = document.querySelector(".timer")
+var timeleft = 25
+var downloadTimer = setInterval(function(){
+    timeleft--;
+    timer.textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
+</script>
+</html>
