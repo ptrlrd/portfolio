@@ -20,7 +20,7 @@ var downloadTimer = setInterval(function(){
     timeleft--;
     timer.textContent = timeleft;
     if(timeleft === 0)
-        clearInterval(downloadTimer);
+        timeleft = 25
     },1000);
 </script>
 </html>
