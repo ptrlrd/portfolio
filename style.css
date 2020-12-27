@@ -587,30 +587,8 @@ footer {
     font-size: 1.1em;
 }
 
-.tool,
-.tool svg {
-    display: flex;
-}
-
-.tool {
-    flex-direction: column;
-}
-
-.tool-img,
-.tool svg {
-  padding-bottom: 5px;
-  justify-content: flex-start;
-  max-width: 850px;
-  place-items: flex-end;
-  z-index: 1;
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-}
-
-.tool svg {
-  height: 72px;
-  width: 72px;
+.skills{
+  display: block;
 }
 
 .lang-tools { /* Set images in learning section to grey */
@@ -750,6 +728,14 @@ a:hover {
     margin: 0;
     background-color: transparent;
     color: var(--bubble-gum-pink);
+}
+
+.skills{
+  display: grid;
+  grid-template: 1em/repeat(4,1fr);
+  grid-gap: 2em;
+  grid-row-gap: 1em;
+  list-style: none;
 }
 
 
