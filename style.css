@@ -647,6 +647,13 @@ footer {
     margin-right: 25px;
 }
 
+.projectimg {
+  display:block;
+  margin: auto;
+  height: 250px;
+  width: 350px;
+}
+
 /* Psuedoclasses for Hyperlinks */
 
 
