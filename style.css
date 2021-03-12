@@ -633,6 +633,7 @@ footer {
     border-radius: 5px;
     color: white;
     outline : none;
+    cursor: pointer;
 }
 
 /* these are the button effects on hover */
