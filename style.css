@@ -21,7 +21,7 @@ p, li, ul, label {
     color: #f2f2f2;
 }
 
-header {
+#header {
     justify-content: space-between;
 }
 
@@ -81,4 +81,8 @@ header {
 .medium a:hover {
     color: #66cdaa !important;
     transition: color 2s;
+}
+
+.carousel-caption {
+    bottom: 30% !important;
 }
