@@ -26,9 +26,16 @@ p, li, ul, label {
 }
 
 .portrait{
-    height: 3.5em;
-    width: 3.5em;
+    height: 2em;
+    width: 2em;
     border-radius: 50%;
+    transition: height 1.5s, width 1.5s;
+}
+
+.portrait:hover {
+    height: 3em;
+    width: 3em;
+    transition: height 1.5s, width 1.5s;
 }
 
 .hyperlink {
