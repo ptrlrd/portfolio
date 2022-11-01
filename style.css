@@ -65,29 +65,29 @@ p, li, ul, label {
     margin: 0;
 }
 
-.discord a, .twitter a, .linkedin a, .github a, .medium a{
-    color: #f2f2f2 !important;
-    transition: color 2s;
+.discord, .twitter, .linkedin, .github, .medium {
+    fill: #f2f2f2 ;
+    transition: fill 2s;
 }
 
-.twitter a:hover {
-    color: #00acee !important;
-    transition: color 2s;
+.twitter:hover {
+    fill: #00acee !important;
+    transition: fill 2s;
 }
 
-.linkedin a:hover {
-    color: #0072b1 !important;
-    transition: color 2s;
+.linkedin:hover {
+    fill: #0072b1;
+    transition: fill 2s;
 }
 
-.github a:hover {
-    color: #171515 !important;
-    transition: color 2s;
+.github:hover {
+    fill: #171515;
+    transition: fill 2s;
 }
 
-.medium a:hover {
-    color: #66cdaa !important;
-    transition: color 2s;
+.medium:hover {
+    fill: #66cdaa;
+    transition: fill 2s;
 }
 
 .carousel-caption {
