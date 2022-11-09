@@ -65,7 +65,7 @@ p, li, ul, label {
     margin: 0;
 }
 
-.discord, .twitter, .linkedin, .github, .medium {
+.discord, .twitter, .linkedin, .github, .medium, .mastodon {
     fill: #f2f2f2 ;
     transition: fill 2s;
 }
@@ -82,6 +82,11 @@ p, li, ul, label {
 
 .github:hover {
     fill: #171515;
+    transition: fill 2s;
+}
+
+.mastodon:hover{
+    fill: #615cf5;
     transition: fill 2s;
 }
 
