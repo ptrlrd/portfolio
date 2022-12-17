@@ -38,6 +38,10 @@ p, li, ul, label {
     transition: height 1.5s, width 1.5s;
 }
 
+.proficient {
+    max-height: 1rem;
+}
+
 .hyperlink {
     color: #8AFF80 !important;
     transition: color 3s;
