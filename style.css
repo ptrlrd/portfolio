@@ -53,9 +53,39 @@ p, li, ul, label {
 }
 
 
-.my-primary{
+.my-primary {
     background-color: #1d1e26 !important;
+    width: 50%;
+    display: flex;
+    margin: auto;
+    max-width: 600px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
+@media only screen and (max-width: 1000px) {
+    .my-primary {
+        width: 100%;
+        max-width: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    * {
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 16px !important;
+    }
+}
+
+
 
 .border-bot{
     border-bottom: solid;
