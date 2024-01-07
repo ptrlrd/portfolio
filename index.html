@@ -1,178 +1,169 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Global site tag (gtag.js) - Google Analytics (To be replaced) -->
+    <title>PETER LORD | PTRLRD | Software Engineer from San Francisco (Bay Area)</title>
+
+    <!-- Meta Data Content -->
+    <meta name="description" content="Peter Lord is a Software Engineer.">
+    <meta name="keywords" content="Peter Lord, DevOps, Software Engineer, San Francisco, Bay Area, Ptrlrd">
+    <meta name="author" content="Peter Lord">
+    <meta name="copyright" content="Peter Lord. all rights reserved.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="revisit-after" content="1 days">
+    <meta name="robots" content="index">
+    <meta name="image" content="https://ptrlrd.com/images/avatar.png">
+
+    <!-- Open Graph / Facebook Meta Data Content-->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ptrlrd.com/">
+    <meta property="og:title" content="Peter Lord's Portfolio">
+    <meta property="og:description" content="Peter Lord is a Software Engineer.">
+    <meta property="og:image" content="https://ptrlrd.com/images/avatar.png">
+
+    <!-- Twitter Meta Data Content -->
+    <meta property="twitter:card" content="photo">
+    <meta property="twitter:url" content="https://ptrlrd.com/">
+    <meta property="twitter:title" content="Peter Lord's Portfolio">
+    <meta property="twitter:description" content="Peter Lord is a Software Engineer.">
+    <meta property="twitter:image" content="https://ptrlrd.com/images/avatar.png">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Mono, monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff; /* Light Background */
+            color: #121212; /* Dark Text */
+        }
+
+        h2 {
+            color: #333; /* Dark Gray */
+        }
+
+        a {
+            color: #FF80BF; /* Pink */
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #80FFEA; /* Cyan */
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .horizontal-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        /* Dark Mode Styling */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212; /* Dark Background */
+                color: #F8F8F2; /* Light Foreground */
+            }
+
+            h2 {
+                color: #9580FF; /* Purple */
+            }
+
+            a {
+                color: #80FFEA; /* Cyan */
+            }
+
+            a:hover {
+                color: #FF80BF;
+            }
+        }
+    </style>
+
     <script async rel="preconnect" src="https://www.googletagmanager.com/gtag/js?id=UA-176719859-1"></script>
     <script rel="preconnect">
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'UA-176719859-1');
     </script>
-
-
-    <!-- Title and Stylesheet References -->
-
-    <title>Peter Lord | PTRLRD | ABOUT </title>
-    <link href="normalize.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script defer src="script.js"></script>
-    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" rel="stylesheet">
-    <script crossorigin="anonymous" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-
-
-    <!-- Meta Data Content -->
-    <meta charset="UTF-8">
-    <meta content="Peter Lord is a Software Engineer." name="description">
-    <meta content="Peter Lord, DevOps, Software Engineer, San Francisco, Bay Area, Ptrlrd" name="keywords">
-    <meta content="Peter Lord" name="author">
-    <meta content="Peter Lord. all rights reserved." name="copyright">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="1 days" name="revisit-after">
-    <meta content="index" name="robots">
-    <meta content="https://ptrlrd.com/images/avatar.png" name="image">
-
-    <!-- Open Graph / Facebook Meta Data Content-->
-    <meta content="website" property="og:type">
-    <meta content="https://ptrlrd.com/" property="og:url">
-    <meta content="Peter Lord's Portfolio" property="og:title">
-    <meta content="Peter Lord is a Software Engineer." property="og:description">
-    <meta content="https://ptrlrd.com/images/avatar.png" property="og:image">
-
-    <!-- Twitter Meta Data Content -->
-    <meta content="photo" property="twitter:card">
-    <meta content="https://ptrlrd.com/" property="twitter:url">
-    <meta content="Peter Lord's Portfolio" property="twitter:title">
-    <meta content="Peter Lord is a Software Engineer." property="twitter:description">
-    <meta content="https://ptrlrd.com/images/avatar.png" property="twitter:image">
-
-    <!-- Favicon -->
-
-    <link href="assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="60x60">
-    <link href="assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-    <link href="assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-
-
 </head>
-<body class="my-primary p-4">
-<div class="container border pt-2 h-100">
-    <div id="header" class="d-flex h-100">
-        <h1 class="small title">/usr/ptrlrd/web/readme.md </h1>
-        <img alt="portrait of peter" class="portrait" src="assets/ptrlrd.png"/>
-    </div>
-    <div id="personal-life" class="border-bot">
-        <h2 class="pt-3">Personal Life:</h2>
-        <p> Hello there! 👋  My name is Peter Lord, I currently reside in Northern California!
-            I love helping contribute to open source projects, building mechanical
-            keyboards, hanging out with my cats, & going on adventures with
-            my wife and son.
-        </p>
-    </div>
-    <div id="work-life" class="border-bot">
-        <h2 class="pt-3">Work Life:</h2>
-            <p>I am currently an Associate Platform Engineer @
-            <a class="hyperlink" aria-label="Lucasfilm" target="_blank"  href="https://www.ilm.com/"
-               rel="nofollow">Industrial Light & Magic</a>. Supporting vfx artists and their immersive division</p>
-    </div>
-    <div id="proficient" class="border-bot">
-        <h2 class="pt-3">Proficiencies:</h2>
-        <div id="myCarousel" class="container carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="#1d1e26"></rect>
-                    </svg>
+<body>
+    <header>
+        <h1>Hello, I am Peter Lord!</h1>
+    </header>
 
-                    <div class="carousel-caption text-end row text-center">
-                        <div class="python col">
-                            <img src="assets/python.svg" alt="javascript logo">
-                        </div>
-                        <div class="aws col">
-                            <img src="assets/aws.svg" alt="aws logo">
-                        </div>
-                        <div class="docker col">
-                            <img src="assets/docker.svg" alt="docker logo">
-                        </div>
-                        <div class="terraform col">
-                            <img src="assets/terraform.svg" alt="Terraform logo">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="#1d1e26"></rect>
-                    </svg>
+    <section>
+        <h2>Personal Life</h2>
+        <p>I currently reside in Northern California area but am generally found in San Francisco! I love helping contribute to open source projects, building mechanical keyboards, hanging out with my cats, & going on adventures with my wife and son.</p>
+    </section>
 
-                    <div class="carousel-caption text-end row text-center">
-                        <div class="ansible col">
-                            <img src="assets/ansible.svg" alt="ansible logo">
-                        </div>
-                        <div class="git col">
-                            <img src="assets/git.svg" alt="git logo">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-    <div id="connect">
-        <h2 class="pt-3">Let's Connect:</h2>
-        <div class="socials container mb-5 mt-5" dir="auto">
-            <div class="row text-center">
-                <div class="mastodon col">
-                    <a href="https://mastodon.social/@ptrlrd" target="_blank" rel="me"
-                       aria-label="Mastadon">
-                        <svg class="mastodon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 417.8 512" fill="#fff" height="30px" width="30px"><path d="M417.8 179.1c0-97.2-63.7-125.7-63.7-125.7-62.5-28.7-228.5-28.4-290.4 0 0 0-63.7 28.5-63.7 125.7 0 115.7-6.6 259.4 105.6 289.1 40.5 10.7 75.3 13 103.3 11.4 50.8-2.8 79.3-18.1 79.3-18.1l-1.7-36.9s-36.3 11.4-77.1 10.1c-40.4-1.4-83-4.4-89.6-54-.6-4.4-.9-9-.9-13.9 85.6 20.9 158.6 9.1 178.7 6.7 56.1-6.7 105-41.3 111.2-72.9 9.8-49.8 9-121.5 9-121.5zm-75.1 125.2h-46.6V190.1c0-49.7-64-51.6-64 6.9v62.5h-46.3V197c0-58.5-64-56.6-64-6.9v114.2H75.1c0-122.1-5.2-147.9 18.4-175 25.9-28.9 79.8-30.8 103.8 6.1l11.6 19.5 11.6-19.5c24.1-37.1 78.1-34.8 103.8-6.1 23.7 27.3 18.4 53 18.4 175z"/></svg>                    </a>
-                </div>
-                <div class="linkedin col">
-                    <a href="https://linkedin.com/in/ptrlrd" target="_blank"
-                       aria-label="Linkedin">
-                        <svg class="linkedin" xmlns="http://www.w3.org/2000/svg" fill="#fff" height="30px" width="30px"  id="Layer_1" x="0px" y="0px" xml:space="preserve" viewBox="0 0.34 310 309.32"><g id="XMLID_801_">	<path id="XMLID_802_" d="M72.16,99.73H9.927c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5H72.16c2.762,0,5-2.238,5-5V104.73   C77.16,101.969,74.922,99.73,72.16,99.73z"></path>	<path id="XMLID_803_" d="M41.066,0.341C18.422,0.341,0,18.743,0,41.362C0,63.991,18.422,82.4,41.066,82.4   c22.626,0,41.033-18.41,41.033-41.038C82.1,18.743,63.692,0.341,41.066,0.341z"></path>	<path id="XMLID_804_" d="M230.454,94.761c-24.995,0-43.472,10.745-54.679,22.954V104.73c0-2.761-2.238-5-5-5h-59.599   c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5h62.097c2.762,0,5-2.238,5-5v-98.918c0-33.333,9.054-46.319,32.29-46.319   c25.306,0,27.317,20.818,27.317,48.034v97.204c0,2.762,2.238,5,5,5H305c2.762,0,5-2.238,5-5V194.995   C310,145.43,300.549,94.761,230.454,94.761z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-                    </a>
-                </div>
-                <div class="github col">
-                    <a href="https://github.com/ptrlrd" target="_blank" aria-label="github">
-                        <svg class="github" xmlns="http://www.w3.org/2000/svg" fill="#fff" height="30px" width="30px" viewBox="0 0 24 23.41"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="https://medium.com/@ptrlrd"
-                       target="_blank" aria-label="Medium">
-                        <svg class="medium" xmlns="http://www.w3.org/2000/svg" height="30px" width="30px" viewBox="0 0 1043.63 592.71">
-                            <path d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36m322.89 0c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279m132.08 0c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94">
-                            </path>
-                        </svg>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="mailto:inquiry@ptrlrd.com?subject=Hello Peter!" aria-label="Mail">
-                        <img class="mail" src="assets/mail.svg"
-                             alt="send Peter mail"/>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    <section>
+        <h2>Work Life</h2>
+        <p>I am currently an Associate Platform Engineer at Industrial Light & Magic. Supporting VFX artists and their immersive division.</p>
+    </section>
+
+    <section>
+        <h2>Proficiencies</h2>
+        <ul class="horizontal-list">
+            <li>Python</li>
+            <li>AWS</li>
+            <li>Docker</li>
+            <li>Terraform</li>
+            <li>Ansible</li>
+            <li>Git</li>
+            <li>and other technologies...</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <ul class="horizontal-list">
+            <li><a href="https://dpc.gg" target="_blank">Devops, Programming, and Coding Community Leader</a></li>
+            <li><a href="https://github.com/ptrlrd/kernel" target="_blank">Kernel</a></li>
+            <li><a href="https://github.com/ptrlrd/ozma" target="_blank">Ozma</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Credits</h2>
+        <ul class="horizontal-list">
+            <li><a href="https://www.imdb.com/title/tt13622776/" target="_blank">Ahsoka</a></li>
+            <li><a href="https://www.imdb.com/title/tt8111088/" target="_blank">The Mandalorian</a></li>
+            <li><a href="https://www.imdb.com/title/tt1462764/" target="_blank">Indiana Jones and the Dial of Destiny</a></li>
+            <li>and other films.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Let's Connect</h2>
+        <ul class="horizontal-list">
+            <li><a href="https://mastodon.social/@ptrlrd" target="_blank">Mastodon</a></li>
+            <li><a href="https://linkedin.com/in/ptrlrd" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/ptrlrd" target="_blank">GitHub</a></li>
+            <li><a href="https://medium.com/@ptrlrd" target="_blank">Medium</a></li>
+            <li><a href="mailto:inquiry@ptrlrd.com?subject=Hello Peter!" target="_blank">Email</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Thanks for visiting -- have a great day.</p>
+    </footer>
 </body>
-
 </html>
