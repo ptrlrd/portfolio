@@ -34,75 +34,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 
-    <style>
-        /* Basic Styling */
-        body {
-            font-family: Mono, monospace;
-            font-size: 14px;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff; /* Light Background */
-            color: #121212; /* Dark Text */
-        }
-
-        h2 {
-            color: #333; /* Dark Gray */
-        }
-
-        a {
-            color: #FF80BF; /* Pink */
-        }
-
-        a:hover {
-            text-decoration: underline;
-            color: #80FFEA; /* Cyan */
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        .horizontal-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        /* Dark Mode Styling */
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #121212; /* Dark Background */
-                color: #F8F8F2; /* Light Foreground */
-            }
-
-            h2 {
-                color: #9580FF; /* Purple */
-            }
-
-            a {
-                color: #80FFEA; /* Cyan */
-            }
-
-            a:hover {
-                color: #FF80BF;
-            }
-        }
-    </style>
-
-    <script async rel="preconnect" src="https://www.googletagmanager.com/gtag/js?id=UA-176719859-1"></script>
-    <script rel="preconnect">
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'UA-176719859-1');
-    </script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -121,21 +53,29 @@
 
     <section>
         <h2>Proficiencies</h2>
-        <ul class="horizontal-list">
+        <ul>
             <li>Python</li>
             <li>AWS</li>
             <li>Docker</li>
             <li>Terraform</li>
             <li>Ansible</li>
             <li>Git</li>
-            <li>and other technologies...</li>
+            ... and more!
+        </ul>
+    </section>
+
+    <section>
+        <h2>Latest Blogs</h2>
+        <ul>
+            <li><a href="./blog/where-has-peter-been.html" target="_blank">Peter, where have you been?</a></li>
         </ul>
     </section>
 
     <section>
         <h2>Projects</h2>
-        <ul class="horizontal-list">
-            <li><a href="https://dpc.gg" target="_blank">Devops, Programming, and Coding Community Leader</a></li>
+        <ul>
+            <li><a href="https://dpc.gg" target="_blank">Devops, Programming, and Coding</a> -- discord community
+                for technologists</li>
             <li><a href="https://github.com/ptrlrd/kernel" target="_blank">Kernel</a></li>
             <li><a href="https://github.com/ptrlrd/ozma" target="_blank">Ozma</a></li>
         </ul>
@@ -143,17 +83,17 @@
 
     <section>
         <h2>Credits</h2>
-        <ul class="horizontal-list">
+        <ul>
             <li><a href="https://www.imdb.com/title/tt13622776/" target="_blank">Ahsoka</a></li>
             <li><a href="https://www.imdb.com/title/tt8111088/" target="_blank">The Mandalorian</a></li>
             <li><a href="https://www.imdb.com/title/tt1462764/" target="_blank">Indiana Jones and the Dial of Destiny</a></li>
-            <li>and other films.</li>
+            and more!
         </ul>
     </section>
 
     <section>
         <h2>Let's Connect</h2>
-        <ul class="horizontal-list">
+        <ul>
             <li><a href="https://mastodon.social/@ptrlrd" target="_blank">Mastodon</a></li>
             <li><a href="https://linkedin.com/in/ptrlrd" target="_blank">LinkedIn</a></li>
             <li><a href="https://github.com/ptrlrd" target="_blank">GitHub</a></li>
