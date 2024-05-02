@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.Language.Lang }}{{ . }}{{ else }}en{{ end }}">
+<head>
+    {{ partial "head.html" . }} <!-- Meta tags, CSS links, etc. -->
+</head>
+<body>
+<header>
+    {{ partial "header.html" . }} <!-- Site-wide header content -->
+</header>
+<main role="main">
+    <article>
+    {{ block "blogs" . }}{{ end }} <!-- Dynamic section for blogs -->
+    </article>
+</main>
+<footer>
+    {{ partial "footer.html" . }} <!-- Site-wide footer content -->
+</footer>
+</body>
+</html>

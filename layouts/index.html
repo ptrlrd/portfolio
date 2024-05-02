@@ -1,0 +1,14 @@
+<html lang="{{ with .Site.Language.Lang }}{{.}}{{ else }}en{{ end }}">
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body>
+{{ partial "header.html" . }}
+{{ partial "personal-life.html" . }}
+{{ partial "work-life.html" . }}
+{{ partial "proficiencies.html" . }}
+{{ partial "projects.html" . }}
+{{ partial "credits.html" . }}
+{{ block "blogs" . }}{{ end }}
+{{ partial "footer.html" . }}

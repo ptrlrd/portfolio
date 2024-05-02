@@ -1,0 +1,26 @@
+{{ define "blogs" }}
+{{ if not .IsPage }}
+<h2>Blogs</h2>
+{{ end }}
+{{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+{{ $dateHuman := .Date | time.Format ":date_long" }}
+{{ if .IsPage }}
+<div id="breadcrumbs">
+    <a href="/" aria-label="Back to Home" style="text-decoration: none;">&#8678; Home</a> <!-- Using the HTML entity for a
+    left-pointing
+    arrow
+     -->
+</div>
+<time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+{{ end }}
+{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+{{ .Content }}
+{{ if not .IsPage }}
+{{ range .Site.RegularPages }}
+{{ $paragraphs := split .Summary "\n" }}
+<h3 style="margin-bottom: 0;"><a href="{{ .RelPermalink }}">{{ .Title }}</a> </h3>
+<sup><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></sup><br>
+{{ index $paragraphs 0 }}... <a href="{{ .RelPermalink }}">read more</a>
+{{ end }}
+{{ end }}
+{{ end }}

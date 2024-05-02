@@ -1,0 +1,14 @@
+title = "Hi, I am Peter Lord."
+theme = 'ptrlrd'
+baseURL = 'http://ptrlrd.com'
+
+[params]
+    description = "Peter Lord's personal website"
+    author = "Peter Lord"
+    keywords = "Peter Lord, Peter, Lord, ptrlrd, ptrlrd.com"
+    github = "https://ptrlrd.com"
+    tabtitle = "PETER LORD | PTRLRD | Software Engineer from San Francisco (Bay Area)"
+
+
+[summaryLengths]
+    length = 5
