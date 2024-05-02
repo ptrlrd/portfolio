@@ -1,0 +1,1 @@
+(()=>{console.log("Oh, you're a sneaky one! ");document.addEventListener("DOMContentLoaded",function(){let t=new Date().getHours(),e="Have a great ";t>=6&&t<18?e+="day":e+="night",e+=" -- thanks for visiting.",document.getElementById("timeBasedGreeting").textContent=e});})();
