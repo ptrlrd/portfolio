@@ -1,6 +1,6 @@
 +++
 title = 'Peter, where have you been?'
-date = 2023-01-15T09:00:00-07:00
+date = 2024-04-29T20:00:00-07:00
 draft = false
 tags = ['infrastructure', 'homelab']
 +++
